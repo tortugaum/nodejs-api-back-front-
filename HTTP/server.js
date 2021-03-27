@@ -15,6 +15,7 @@ http.createServer((req,res)=>{
 
     if(!allowed)
         return
+        
     fs.readFile(
         filePath,
         (err,content)=>{
