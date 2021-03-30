@@ -5,16 +5,16 @@
       "url": "http://google.com"
     },
     {
-      "name": "Google",
-      "url": "http://facebook.com.br"
-    },
-    {
-      "name": "Google",
-      "url": "http://instagram.com"
-    },
-    {
       "name": "Twitter",
       "url": "http://twitter.com"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com"
+    },
+    {
+      "name": "teste",
+      "url": "http://teste.com.br"
     }
   ]
 }

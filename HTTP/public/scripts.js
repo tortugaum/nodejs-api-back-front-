@@ -21,16 +21,19 @@ function addElement({ name, url }) {
     a.target = "_blank"
 
     trash.innerHTML = "x"
-    trash.onclick = () => removeElement(trash)
+    trash.onclick = () => removeElement(trash, name, url)
 
     li.append(a)
     li.append(trash)
     ul.append(li)
+
 }
 
-function removeElement(el) {
+function removeElement(el, name, url) {
     if (confirm('Tem certeza que deseja deletar?'))
         el.parentNode.remove()
+
+    const res = fetch(`http://localhost:3000/?name=${name}&url=${url}&del=1`)    
 }
 
 form.addEventListener("submit", (event) => {
@@ -50,6 +53,6 @@ form.addEventListener("submit", (event) => {
         return alert("Digite a url da maneira correta")
 
     addElement({ name, url })
-
+    const res = fetch(`http://localhost:3000/?name=${name}&url=${url}`)
     input.value = ""
 })
